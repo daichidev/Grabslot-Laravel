@@ -27,7 +27,7 @@
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa-solid fa-xmark"></i></a>
                                 <p class="fs-8 mb-0 pb-0">{{ Session::get('success') }}</p>
                             </div>
-                            
+
                         @endif
                         <form id="payment-form" role="form" action="{{ route('stripe.post') }}" method="post" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}">
                             @csrf
@@ -53,7 +53,7 @@
                             <div class="row">
                                 <div class="col-sm-8">
                                     <div class="form-group">
-                                        <label><span class="hidden-xs">合計金額</span></label>
+                                        <label><span class="hidden-xs">有効期限</span></label>
                                         <div class="input-group">
                                             <select class="form-control g_input card-expiry-month" name="month">
                                                 <option value="">月</option>
@@ -89,7 +89,7 @@
                                     <div class='alert-danger alert'>エラーを修正して再試行してください。</div>
                                 </div>
                             </div>
-        
+
                             <button id="paySubmit" class="subscribe btn btn-primary btn-block spinner-white spinner-right" type="submit" data-toggle="modal" data-target="#confirmPaymentModal">入力内容を確認する</button>
                         </form>
                     </div>
