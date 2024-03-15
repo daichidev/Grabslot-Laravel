@@ -33,6 +33,9 @@ class CheckCourse
         } elseif (Auth::user()->created_at->greaterThanOrEqualTo($oneWeekAgo)) {
             return $next($request);
         }
+        elseif (Auth::check() && Auth::user()->roles->contains('slug', 'admin')) {
+            return $next($request);
+        }
 
         // Redirect back to the previous URL
         return redirect()->back()->with('error', 'You do not have access to this store.');
