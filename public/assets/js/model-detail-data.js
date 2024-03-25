@@ -166,6 +166,9 @@ var modelDetailData = (function () {
                     show: false
                 },
                 labels: {
+                    formatter: function (value) {
+                    return (parseInt(value) % 5 === 0 ? parseInt(value) : '');
+                    },
                     style: {
                         colors: KTApp.getSettings()['colors']['gray']['gray-500'],
                         fontSize: '12px',
