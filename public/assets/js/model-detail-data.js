@@ -5,6 +5,8 @@ var modelDetailData = (function () {
         $('#modelDetailTable').on('click', '.model-table-row .td-block .dailyModelBlue', function () {
             $("#modelDetailTable").find(".active_blink").removeClass('active_blink');
 
+            $(this).addClass('active_blink');
+
             var columnNumber = $(this).parent('.td-block').index() + 1;
 
             $('#modelDetailTable .model-table-row .td-block.td-light-blue:nth-child(' + columnNumber + '), ' +
@@ -19,7 +21,6 @@ var modelDetailData = (function () {
         });
 
         $('#modelDetailTable').on('click', '.left-cnt-block .dailyModelBlue', function () {
-            $("#modelDetailTable").find(".active_blink").removeClass('active_blink');
             $(this).closest('.model-table-row').find(".td-light-blue, .td-blue, .td-dark-blue").addClass('active_blink');
         });
 
