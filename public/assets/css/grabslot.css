@@ -285,6 +285,13 @@ div.dataTables_wrapper div.dataTables_filter input {
     grid-template-columns: auto;
     width: 100%;
 }
+
+@media (max-height: 2532px) {
+    .model-table {
+        display: unset;
+    }
+}
+
 .model-table .model-table-row {
     display: flex;
     flex-wrap: nowrap;
@@ -497,7 +504,7 @@ div.dataTables_wrapper div.dataTables_filter input {
     color: black;
     font-size: 8px;
     font-weight: 600;
-    height: 100%;
+    height: auto;
 }
 
 .divide-cell::before {
@@ -877,4 +884,12 @@ html {
 
 .blinking-text {
     animation: blink 1s infinite; /* Change the duration as needed */
+}
+
+.blur-background {
+    opacity: 0.5;
+}
+
+.set-x-smartphone {
+    display: unset;
 }

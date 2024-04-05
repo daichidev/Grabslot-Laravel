@@ -16,6 +16,35 @@ var modelDetailData = (function () {
             });
         });
 
+        $('#modelDetailTable').on('click', '.model-table-row .td-block.td-header.td-date', function () {
+            $('#modelDetailTable .model-table-row .td-block.td-header.td-date').addClass('blur-background');
+            $(this).removeClass('blur-background');
+            $('#modelDetailTable .model-table-row .td-block.td-sheet').addClass('blur-background');
+            var columnIndex = $(this).index() - 2;
+            $('#modelDetailTable .model-table-row').each(function() {
+                $(this).find('.td-block.td-sheet').eq(columnIndex).removeClass('blur-background');
+            });
+            $('#modelDetailTable .model-table-row .td-block.td-model-name').removeClass('blur-background');
+        });
+
+        $('#modelDetailTable').on('click', '.model-table-row .td-block.td-model-name', function () {
+            console.log("model name click");
+            $('#modelDetailTable .model-table-row .td-block.td-model-name').addClass('blur-background');
+            $(this).removeClass('blur-background');
+            $('#modelDetailTable .model-table-row .td-block.td-sheet').addClass('blur-background');
+            var rowIndex = $(this).closest('.model-table-row').index() + 1;
+            $('#modelDetailTable .model-table-row').eq(rowIndex).find('.td-block.td-sheet').removeClass('blur-background');
+            $('#modelDetailTable .model-table-row .td-block.td-header.td-date').removeClass('blur-background');
+        });
+
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('#modelDetailTable').length) {
+                // Click event occurred outside of #modelDetailTable
+                console.log("hi");
+                $("#modelDetailTable").find(".blur-background").removeClass('blur-background');
+            }
+        });
+
         $('#modelDetailTable').on('click', '.td-block.td-sheet, .dailyModelRed', function () {
             $("#modelDetailTable").find(".active_blink").removeClass('active_blink');
         });
