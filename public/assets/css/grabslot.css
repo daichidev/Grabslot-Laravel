@@ -290,6 +290,9 @@ div.dataTables_wrapper div.dataTables_filter input {
     .model-table {
         display: unset;
     }
+    .table-responsive{
+        overflow-x: unset !important;
+    }
 }
 
 .model-table .model-table-row {

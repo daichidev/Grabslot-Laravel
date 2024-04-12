@@ -31,15 +31,13 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            // 'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'privacy_confirm' => ['required']
         ], [], [
-            // 'name.required' => '名前は必須項目です。',
             'email.required' => 'メールアドレスは必須項目です。',
             'email.email' => '正しいメールアドレスの形式ではありません。',
             'password_confirmation.confirmed' => 'パスワードが一致しません。',
-            // Add more custom messages for specific fields or rules
         ]);
 
         $user = User::create([

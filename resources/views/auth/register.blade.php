@@ -15,7 +15,7 @@
             </div> -->
             <div class="form-group">
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 p-form-control" id="email" type="text" placeholder="メールアドレス" name="email" autocomplete="email" required/>
+                <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 p-form-control" id="email" type="text" value="{{ old('email')}}" placeholder="メールアドレス" name="email" autocomplete="email" required/>
             </div>
             <div class="form-group">
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
@@ -24,6 +24,10 @@
             <div class="form-group">
                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                 <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 p-form-control" id="password_confirmation" type="password" placeholder="確認のため再入力" name="password_confirmation" required autocomplete="new-password"/>
+            </div>
+            <x-input-error :messages="$errors->get('privacy_confirm')" class="mt-2" />
+            <div class="form-group d-flex justify-content-center">
+                    <p><input id="privacy_confirm" type="checkbox" name="privacy_confirm" />&nbsp;<a href="{{ asset('assets/pdf/privacy_policy.pdf') }}" target="blank">利用規約</a>および<a href="{{ asset('assets/pdf/terms_of_use.pdf') }}"  target="blank">個人情報の取り扱い</a>について同意</p>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3 m-2 p-primary-btn" id="registerBtn">登録する</button>
@@ -40,7 +44,7 @@
     $(document).ready(function() {
         $("#registerBtn").click(function(e) {
             e.preventDefault();
-            
+
             $email = $("#registerForm #email").val();
             $pwd = $("#registerForm #password").val();
             $pwd_confirm = $("#registerForm #password_confirmation").val();

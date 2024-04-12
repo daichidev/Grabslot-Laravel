@@ -228,15 +228,16 @@
                                 </div>
                             </div>
 
-							<!-- <div class="nav mt-sm-15">
-								<a href="/" class="nav-link pr-3 pl-0 color-white mx-2 font-weight-bold">ホーム</a>
-								<a href="/hall-data" class="nav-link px-3 color-white mx-2 font-weight-bold">ホールデータ</a>
-								<a href="/store" class="nav-link pl-3 pr-0 color-white mx-2 font-weight-bold">出てたお店</a>
-								<a href="/all-systems" class="nav-link pl-3 pr-0 color-white mx-2 font-weight-bold">全台系</a>
-								<a href="/old-event-date" class="nav-link pl-3 pr-0 color-white mx-2 font-weight-bold">旧イベント日</a>
-								<a href="/anniversary" class="nav-link pl-3 pr-0 color-white mx-2 font-weight-bold">周年日</a>
-								<a href="javascript:;" class="nav-link pl-3 pr-0 color-white mx-2 font-weight-bold">情報提供・バグ報告 </a>
-							</div> -->
+							<ul class="nav mt-sm-15" style="
+                                display: flex;
+                                align-content: center;
+                                flex-wrap: nowrap;
+                                flex-direction: column;
+                            ">
+
+								<li><a href="{{ asset('assets/pdf/privacy_policy.pdf') }}" class="nav-link pr-3 pl-0 color-white mx-2 font-weight-bold">利用規約</a></li>
+								<li><a href="{{ asset('assets/pdf/terms_of_use.pdf') }}"   class="nav-link px-3 pl-0 color-white mx-2 font-weight-bold" style="padding-left: 0 !important;">個人情報の取り扱い</a></li>
+                            </ul>
 						</div>
 						<!--end::Container-->
 
