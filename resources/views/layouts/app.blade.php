@@ -235,8 +235,8 @@
                                 flex-direction: column;
                             ">
 
-								<li><a href="{{ asset('assets/pdf/privacy_policy.pdf') }}" class="nav-link pr-3 pl-0 color-white mx-2 font-weight-bold">利用規約</a></li>
-								<li><a href="{{ asset('assets/pdf/terms_of_use.pdf') }}"   class="nav-link px-3 pl-0 color-white mx-2 font-weight-bold" style="padding-left: 0 !important;">個人情報の取り扱い</a></li>
+								<li><a href="/terms-of-service" class="nav-link pr-3 pl-0 color-white mx-2 font-weight-bold">利用規約</a></li>
+								<li><a href="/privacy-policy"   class="nav-link px-3 pl-0 color-white mx-2 font-weight-bold" style="padding-left: 0 !important;">プライバシーポリシー</a></li>
                             </ul>
 						</div>
 						<!--end::Container-->

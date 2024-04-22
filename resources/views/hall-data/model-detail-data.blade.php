@@ -63,9 +63,9 @@
 
                         <div class="table-responsive">
                             <div class="model-table mb-15" id="modelDetailTable">
-                                <div class="model-table-row">
-                                    <div class="td-block td-header"></div>
-                                    <div class="divide-cell">
+                                <div class="model-table-row model-sticky-3">
+                                    <div class="td-block td-header model-sticky-h-1"></div>
+                                    <div class="divide-cell model-sticky-h-2">
                                         <div class="c1">日付</div>
                                         <div class="c2">台番号</div>
                                     </div>
@@ -77,6 +77,8 @@
                                             if (isset($dateString[3]) && $dateString[3] === '0') {
                                                 $dateString = substr_replace($dateString, '', 3, 1);
                                             }
+
+                                            $dateString = str_replace(array('(', ')'), ' ', $dateString);
                                         @endphp
 
                                         {{ $dateString }}
@@ -85,10 +87,10 @@
                                 </div>
                                 <div class="model-table">
                                     @php
-                                        $maxItemCount = 0; 
-                                        $mainItemCount = 0; 
-                                        $blueCnt = 0; 
-                                        $redCnt = 0; 
+                                        $maxItemCount = 0;
+                                        $mainItemCount = 0;
+                                        $blueCnt = 0;
+                                        $redCnt = 0;
 
                                         foreach ($modelMonthData as $items) {
                                             $maxItemCount = max($maxItemCount, count($items));
@@ -118,29 +120,29 @@
                                             @endforeach
 
                                             @if ($i < $mainItemCount)
-                                                <div class="td-block left-cnt-block">
+                                                <div class="td-block left-cnt-block model-sticky-h-3">
                                                     <div class="text-center dailyModelBlue">
                                                         {{ $blueCnt }}
                                                     </div>
                                                     <div class="text-center dailyModelRed">
-                                                        {{ $redCnt }}  
+                                                        {{ $redCnt }}
                                                     </div>
                                                 </div>
                                             @else
-                                                <div class="td-block"></div>
-                                            @endif                                  
+                                                <div class="td-block model-sticky-h-3"></div>
+                                            @endif
 
                                             @php
                                                 $redCnt = 0;
                                                 $blueCnt = 0;
                                             @endphp
 
-                                            <div class="td-block td-model-name">@if($i < $mainItemCount) {{ $modelId[$i] }} @endif</div>
+                                            <div class="td-block td-model-name model-sticky-h-4">@if($i < $mainItemCount) {{ $modelId[$i] }} @endif</div>
 
                                             @foreach ($modelMonthData as $date => $items)
                                                 @if ($i < $mainItemCount)
                                                     @if ( isset($items[$i]['extra_sheet']) )
-                                                        <div class="td-block {{ isset($items[$i]['item_color']['color']) ? $items[$i]['item_color']['color'] : '' }} td-sheet" data-id="{{ isset($items[$i]['id']) ? $items[$i]['id'] : '' }}" data-machine_number="{{ isset($items[$i]['machine_number']) ? $items[$i]['machine_number'] : '' }}" data-toggle="modal" data-target="#dataModal">
+                                                        <div class="td-block {{ isset($items[$i]['item_color']['color']) ? $items[$i]['item_color']['color'] : '' }} td-sheet" data-id="{{ isset($items[$i]['id']) ? $items[$i]['id'] : '' }}" data-machine_number="{{ isset($items[$i]['machine_number']) ? $items[$i]['machine_number'] : '' }}">
                                                             {{ $items[$i]['extra_sheet'] ?? '' }}
                                                         </div>
                                                     @else
@@ -162,7 +164,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>              
+                    </div>
                 </div>
             </div>
             <!--end::Container-->

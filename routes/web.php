@@ -28,7 +28,7 @@ Route::get('/clear_all', function() {
     Artisan::call('config:cache');
     Artisan::call('view:clear');
 	Artisan::call('route:cache');
-	
+
     return "Cache Cleared..!";
 });
 
@@ -99,3 +99,6 @@ Route::middleware(['auth', 'verified', 'checkRole'])->prefix('admin')->group(fun
     Route::get('users-management', [UserManagementController::class, 'index'])->name('admin.users.management');
     Route::post('users-list', [UserManagementController::class, 'getUsersList'])->name('admin.users.list');
 });
+
+Route::get('privacy-policy', [UserController::class, 'privacyPolicyAction'])->name('privacy.policy');
+Route::get('terms-of-service', [UserController::class, 'termsOfServiceAction'])->name('terms.of.service');

@@ -27,7 +27,7 @@
             </div>
             <x-input-error :messages="$errors->get('privacy_confirm')" class="mt-2" />
             <div class="form-group d-flex justify-content-center">
-                    <p><input id="privacy_confirm" type="checkbox" name="privacy_confirm" />&nbsp;<a href="{{ asset('assets/pdf/privacy_policy.pdf') }}" target="blank">利用規約</a>および<a href="{{ asset('assets/pdf/terms_of_use.pdf') }}"  target="blank">個人情報の取り扱い</a>について同意</p>
+                    <p><input id="privacy_confirm" type="checkbox" name="privacy_confirm" />&nbsp;<a href="/terms-of-service" target="blank">利用規約</a>および<a href="/privacy-policy"  target="blank">プライバシーポリシー</a>について同意</p>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3 m-2 p-primary-btn" id="registerBtn">登録する</button>

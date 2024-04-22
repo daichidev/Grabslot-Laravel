@@ -40,7 +40,6 @@ var modelDetailData = (function () {
         $(document).on('click', function (e) {
             if (!$(e.target).closest('#modelDetailTable').length) {
                 // Click event occurred outside of #modelDetailTable
-                console.log("hi");
                 $("#modelDetailTable").find(".blur-background").removeClass('blur-background');
             }
         });
@@ -65,12 +64,18 @@ var modelDetailData = (function () {
 
     var modelDetailModal = function () {
         $("#modelDetailTable").on("click", ".td-sheet", function () {
-            var model_id = $(this).data('id');
-            var model_machine_number = $(this).data('machine_number');
-            var selected_model = getSelectedModel(model_id, model_machine_number, modelMonthData);
+            if ($(this).hasClass('blur-background')) {
+                $("#modelDetailTable").find(".blur-background").removeClass('blur-background');
+                $('#dataModal').modal('hide');
+            } else {
+                var model_id = $(this).data('id');
+                var model_machine_number = $(this).data('machine_number');
+                var selected_model = getSelectedModel(model_id, model_machine_number, modelMonthData);
 
-            getModelData(model_id);
-            modelChart(model_id, model_machine_number, selected_model);
+                getModelData(model_id);
+                modelChart(model_id, model_machine_number, selected_model);
+                $("#dataModal").modal('show');
+            }
         });
     };
 
@@ -365,5 +370,9 @@ if (typeof module !== 'undefined') {
 }
 
 jQuery(document).ready(function () {
+    var leftCntBlockWidth = $('.td-block.td-header').width();
+    $('.divide-cell').css('left', leftCntBlockWidth + 'px');
+    $('.td-model-name').css('left', leftCntBlockWidth + 'px');
+    //$('.divide-cell').css('border-left', '2px solid #27282e');
     modelDetailData.init();
 });

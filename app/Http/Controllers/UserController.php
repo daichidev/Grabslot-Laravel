@@ -41,7 +41,7 @@ class UserController extends Controller
         if ($latest_payment == null) {
             // Calculate the difference in seconds between current time and creation time of the latest payment
             $time_diff_seconds = abs(strtotime(Auth::user()->created_at) - time());
-    
+
             // Convert seconds to days
             $remaining_days = ceil($time_diff_seconds / (60 * 60 * 24)); // 60 seconds * 60 minutes * 24 hours = 1 day
             if ($remaining_days >= 0 && $remaining_days <= 7) {
@@ -72,34 +72,34 @@ class UserController extends Controller
             $request->validate([
                 'user_email' => 'required|email',
             ]);
-    
+
             $user = Auth::user();
-    
+
             if ($user) {
                 $user->email = $request->input('user_email');
                 $user->save();
-    
+
                 return response()->json(['result' => 'success', 'message' => 'メールアドレスが更新されました']);
             }
-    
+
             return response()->json(['result' => 'warning', 'message' => 'メールの更新に失敗しました'], 404);
         } catch (\Exception $e) {
             return response()->json(['result' => 'danger', 'message' => 'リクエストの処理中にエラーが発生しました'], 500);
         }
     }
-    
+
     public function userPassword(Request $request) {
         try {
             $oldPassword = $request->input('old_pwd');
             $newPassword = $request->input('new_pwd');
-    
+
             $correctOldPasswordHash = Auth::user()->password;
-    
+
             if (Hash::check($oldPassword, $correctOldPasswordHash)) {
                 $newPasswordHash = Hash::make($newPassword);
-    
+
                 Auth::user()->update(['password' => $newPasswordHash]);
-    
+
                 return response()->json(['result' => 'success', 'message' => '新しくパスワードが変更されました。']);
             } else {
                 return response()->json(['result' => 'warning', 'message' => '古いパスワードが正しくありません。 パスワードの変更に失敗しました。'], 422);
@@ -108,5 +108,13 @@ class UserController extends Controller
             return response()->json(['result' => 'danger', 'message' => 'リクエストの処理中にエラーが発生しました'], 500);
         }
     }
-        
+
+    public function privacyPolicyAction() {
+        return view('privacy-policy');
+    }
+
+    public function termsOfServiceAction() {
+        return view('terms-of-service');
+    }
+
 }

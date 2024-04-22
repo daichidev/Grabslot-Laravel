@@ -115,7 +115,7 @@ class HallDataController extends Controller
             ->orderBy('A.machine_number')
             ->get();
 
-        // Add Number attribute Color 
+        // Add Number attribute Color
         function itemColor($extra_sheet, $g_number) {
             $result = [];
 

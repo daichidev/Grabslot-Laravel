@@ -319,9 +319,38 @@ div.dataTables_wrapper div.dataTables_filter input {
     font-size: 8px;
     font-weight: 600;
 }
+.model-sticky-h-1 {
+    position: sticky !important;
+    left: 0 !important;
+    z-index: 100 !important;
+}
+
+.model-sticky-h-3 {
+    position: sticky !important;
+    left: 0 !important;
+    z-index: 98 !important;
+}
+
+.model-sticky-h-2 {
+    position: sticky !important;
+    z-index: 100 !important;
+}
+
+.model-sticky-h-4 {
+    position: sticky !important;
+    z-index: 98 !important;
+}
+
+.model-sticky-3 {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 99 !important;
+}
+
 .model-table .td-block.td-sheet {
     color: black;
     cursor: pointer;
+    justify-content: right !important;
 }
 .dailyModelBlue {
     border-right: 1px solid #3c3939;
