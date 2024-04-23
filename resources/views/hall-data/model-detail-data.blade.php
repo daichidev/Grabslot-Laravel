@@ -78,7 +78,7 @@
                                                 $dateString = substr_replace($dateString, '', 3, 1);
                                             }
 
-                                            $dateString = str_replace(array('(', ')'), ' ', $dateString);
+                                            $dateString = str_replace(array('(', ')'), '', $dateString);
                                         @endphp
 
                                         {{ $dateString }}

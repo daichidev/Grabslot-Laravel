@@ -286,15 +286,6 @@ div.dataTables_wrapper div.dataTables_filter input {
     width: 100%;
 }
 
-@media (max-height: 2532px) {
-    .model-table {
-        display: unset;
-    }
-    .table-responsive{
-        overflow-x: unset !important;
-    }
-}
-
 .model-table .model-table-row {
     display: flex;
     flex-wrap: nowrap;
@@ -924,4 +915,9 @@ html {
 
 .set-x-smartphone {
     display: unset;
+}
+
+.table-responsive {
+    overflow-y: auto;
+    height: 500px;
 }
