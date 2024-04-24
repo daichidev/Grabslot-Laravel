@@ -185,7 +185,7 @@
                 </div>
                 <div class="modal-body">
                     <div id="model-chart"></div>
-                    <div class="table-responsive">
+                    <div class="table-responsive" style="height: auto">
                         <table class="table table-checkable table-bordered" id="modalTable">
                             <thead>
                                 <tr>

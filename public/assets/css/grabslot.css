@@ -297,8 +297,8 @@ div.dataTables_wrapper div.dataTables_filter input {
     border-right: 1px solid #27282e;
     border-bottom: 1px solid #27282e;
     box-sizing: border-box;
-    height: 26px;
-    width: 57px;
+    height: 20px;
+    width: 40px;
     font-size: 11px;
     display: flex;
     align-items: center;
