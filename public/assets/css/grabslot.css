@@ -342,6 +342,7 @@ div.dataTables_wrapper div.dataTables_filter input {
     color: black;
     cursor: pointer;
     justify-content: right !important;
+    font-family: math;
 }
 .dailyModelBlue {
     border-right: 1px solid #3c3939;
