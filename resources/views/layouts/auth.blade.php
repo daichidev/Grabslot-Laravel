@@ -36,10 +36,11 @@
 				<div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid p-bg-content" >
 					<div class="login-form text-center text-white p-7 position-relative overflow-hidden">
 						<!--begin::Login Header-->
-						<div class="d-flex flex-center mb-15">
-							<a href="/">
+						<div class="d-flex flex-center mb-15" style="flex-wrap: wrap;">
+							<a style="display: block" href="/">
 								<img src="assets/media/logos/logo.svg" class="max-h-100px w-100" alt="" />
 							</a>
+                            <h3 style="font-size: 19px; margin-top: 5px">パチスロ高設定予測サイト</h3>
 						</div>
 						<!--end::Login Header-->
 
@@ -74,7 +75,7 @@
 				});
 			}(jQuery));
 		</script>
-		
+
 	</body>
 	<!--end::Body-->
 </html>

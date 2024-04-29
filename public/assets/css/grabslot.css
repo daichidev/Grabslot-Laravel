@@ -293,12 +293,12 @@ div.dataTables_wrapper div.dataTables_filter input {
 .model-table .td-block {
     background-color: #ffffff;
     flex: 1.35;
-    min-width: 21px; /* Allow blocks to shrink if needed */
+    min-width: 19px; /* Allow blocks to shrink if needed */
     border-right: 1px solid #27282e;
     border-bottom: 1px solid #27282e;
     box-sizing: border-box;
     height: 10px;
-    width: 21px;
+    width: 19px;
     font-size: 5px;
     display: flex;
     align-items: center;
@@ -364,17 +364,17 @@ div.dataTables_wrapper div.dataTables_filter input {
     justify-content: center;
 }
 .model-table-row > .td-block:nth-child(1), .divide-cell {
-    border-right: 2px solid #27282e;
+    border-right: 1.5px solid #27282e;
 }
 .model-table-row > .td-block:nth-child(2), .divide-cell {
     flex: 1 !important;
-    border-right: 2px solid #27282e !important;
+    border-right: 1.5px solid #27282e !important;
 }
 #modelDetailTable > .model-table-row:first-child {
-    border-bottom: 1px solid #27282e;
+    border-bottom: 0.5px solid #27282e;
 }
 .model-table .model-table-row:last-child {
-    border-top: 1px solid #27282e;
+    border-top: 0.5px solid #27282e;
 }
 .td-date {
     background-color: #FFFFF0 !important;
@@ -513,7 +513,7 @@ div.dataTables_wrapper div.dataTables_filter input {
     position: relative;
     background-color: #ffffff;
     flex: 1;
-    min-width: 21px;
+    min-width: 19px;
     border-right: 1px solid #27282e;
     border-bottom: 1px solid #27282e;
     box-sizing: border-box;

@@ -7,7 +7,7 @@
             <h3>ログイン</h3>
             <!-- <p class="mt-10 white-mode">GRABの宣伝URLとリンクさせる！</p> -->
             <div class="my-17">
-                <a class="area" href="https://grabslot.co.jp" target="_blank">GRABの宣伝URLとリンクさせる!</a>
+                <a class="area" href="https://grabslot.co.jp" target="_blank">GRABとは　このサイトの使い方</a>
             </div>
             <!-- <div class="login-promotion-title my-15">
                 <a href="https://grabslot.co.jp" target="_blank">GRABの宣伝URLとリンクさせる！</a>
@@ -45,4 +45,3 @@
     </div>
     <!--end::Login Sign in form-->
 @endsection
-					
