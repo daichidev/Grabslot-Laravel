@@ -4,10 +4,8 @@
     <!--begin::Login Sign in form-->
     <div class="login-signin">
         <div class="mb-10">
-            <h3>ログイン</h3>
-            <!-- <p class="mt-10 white-mode">GRABの宣伝URLとリンクさせる！</p> -->
             <div class="my-17">
-                <a class="area" href="https://grabslot.co.jp" target="_blank">GRABとは　このサイトの使い方</a>
+                <a class="area" href="{{ asset('Grabslot_landingPage/index.html') }}" target="_blank">ここをクリック</a>
             </div>
             <!-- <div class="login-promotion-title my-15">
                 <a href="https://grabslot.co.jp" target="_blank">GRABの宣伝URLとリンクさせる！</a>

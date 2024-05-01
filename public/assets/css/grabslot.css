@@ -294,8 +294,8 @@ div.dataTables_wrapper div.dataTables_filter input {
     background-color: #ffffff;
     flex: 1.35;
     min-width: 19px; /* Allow blocks to shrink if needed */
-    border-right: 1px solid #27282e;
-    border-bottom: 1px solid #27282e;
+    border-right: 0.8px solid #27282e;
+    border-bottom: 0.8px solid #27282e;
     box-sizing: border-box;
     height: 10px;
     width: 19px;
@@ -308,7 +308,6 @@ div.dataTables_wrapper div.dataTables_filter input {
 .model-table .td-block.td-header {
     color: black;
     font-size: 5px;
-    font-weight: 600;
 }
 .model-sticky-h-1 {
     position: sticky !important;
@@ -922,4 +921,8 @@ html {
 .table-responsive {
     overflow-y: auto;
     height: 500px;
+}
+
+.w-80 {
+    width:80% !important
 }

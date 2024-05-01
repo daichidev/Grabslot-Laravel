@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'IPAMincho';
+    src: url('../fonts/IPAMincho/IPAMincho_Regular.ttf') format('truetype'); /* Specify the format as 'truetype' for .ttf files */
+    /* Add additional formats if needed, for example, woff2, woff */
+}
+
+body {
+    background-color: #1A1B23;
+    color: #ffffff;
+    font-family: 'IPAMincho', sans-serif;
+}
+.landing-dark-bg {
+    background-color: #1A1B23 !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+.fs-2 {
+    font-size: 40px;
+}
+.fs-5 {
+    font-size: 24px;
+}
+.fs-6 {
+    font-size: 20px;
+}
+.fs-7 {
+    font-size: 16px;
+}
+.fs-8 {
+    font-size: 14px;
+}
+.fs-9 {
+    font-size: 12px;
+}
+.text-white {
+    color: #ffffff !important;
+}
+.text-dark {
+    color: #13263c  !important;
+}
+
+
+[data-kt-sticky-landing-header=on] .landing-header {
+    background-color: #13263c !important;
+    box-shadow: 0px 3px 11px rgb(3 13 24);
+}
+.menu-item .menu-link {
+    color: #ffffff;
+}
+[data-kt-sticky-landing-header=on] .landing-header .menu .menu-link.active {
+    color: white;
+}
+
+.td-white {
+    background-color: #ffffff !important;
+}
+.td-light-blue {
+    background-color: #bfe2ff  !important;
+}
+.td-blue {
+    background-color: #469cf5 !important;
+}
+.td-dark-blue {
+    background-color: #305496 !important;
+}
+.td-pink {
+    background-color: #ff9999!important;
+}
+.td-red {
+    background-color: #ff5050 !important;
+}
+.td-gray {
+    background-color: #bfbfbf !important;
+}
+
+.arrow_1 {
+    margin-top: 3px;
+    left: 24px;
+}
+.arrow_1_2 {
+    margin-top: 3px;
+    left: 77px;
+}
+.arrow_2 {
+    margin-top: 3px;
+    left: 224px;
+}
+.arrow_3 {
+    top: 153px;
+    left: -17px;
+}
+.mouse-pinter i {
+    color: white;
+    font-size: 16px;
+}
