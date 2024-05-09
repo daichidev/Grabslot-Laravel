@@ -213,7 +213,7 @@
 							<div>
                                 <div class="logo">
                                     <a href="/"><img src="{{ asset('assets/media/logos/logo.svg') }}" alt="" class="max-h-30px"></a>
-                                    <h6 style="font-size: 14px; margin-top: 2px">パチスロ高設定予測サイト</h6>
+                                    <h6 style="font-size: 14px; margin-top: 2px; color: white">パチスロ高設定予測サイト</h6>
                                 </div>
                                 <div class="social-link-list mt-7">
                                     <a href="https://twitter.com/grab202404" class="btn btn-icon btn-outline-white btn-circle mr-2">
