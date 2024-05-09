@@ -414,7 +414,6 @@ div.dataTables_wrapper div.dataTables_filter input {
     box-shadow: 0 0.7em 0.7em -0.2em #39393c;
     transform: translateY(-0.4em);
     font-weight: 700;
-    font-size: 0.92rem !important;
     transition: 0.2s;
     border-top: 1px solid #484c58;
 }
@@ -513,8 +512,8 @@ div.dataTables_wrapper div.dataTables_filter input {
     background-color: #ffffff;
     flex: 1;
     min-width: 19px;
-    border-right: 1px solid #27282e;
-    border-bottom: 1px solid #27282e;
+    border-right: 0.8px solid #27282e;
+    border-bottom: 0.8px solid #27282e;
     box-sizing: border-box;
     height: 32px;
     width: 100%;
@@ -924,5 +923,5 @@ html {
 }
 
 .w-80 {
-    width:80% !important
+    width:60% !important
 }

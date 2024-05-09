@@ -34,7 +34,9 @@
 			<!--begin::Logo-->
 			<a href="/">
 				<img alt="Logo" src="{{ asset('assets/media/logos/logo.svg') }}" class="logo-default max-h-30px w-100" />
+                <h6 style="font-size: 14px; margin-top: 2px">パチスロ高設定予測サイト</h6>
 			</a>
+
 			<!--end::Logo-->
 			<!--begin::Toolbar-->
 			<div class="d-flex align-items-center">
@@ -209,12 +211,13 @@
 						<!--begin::Container-->
 						<div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
 							<div>
-                                <div class="logo w-80">
-                                    <a href="/"><img src="{{ asset('assets/media/logos/logo.svg') }}" alt="" class="w-75"></a>
+                                <div class="logo">
+                                    <a href="/"><img src="{{ asset('assets/media/logos/logo.svg') }}" alt="" class="max-h-30px"></a>
+                                    <h6 style="font-size: 14px; margin-top: 2px">パチスロ高設定予測サイト</h6>
                                 </div>
                                 <div class="social-link-list mt-7">
-                                    <a href="#" class="btn btn-icon btn-outline-white btn-circle mr-2">
-                                        <i class="fa-brands mt-1 fa-twitter"></i>
+                                    <a href="https://twitter.com/grab202404" class="btn btn-icon btn-outline-white btn-circle mr-2">
+                                        <i class="fa-brands mt-1 fa-x-twitter"></i>
                                     </a>
                                     <a href="#" class="btn btn-icon btn-outline-white btn-circle mr-2">
                                         <i class="fa-brands mt-1 fa-instagram fs-7"></i>

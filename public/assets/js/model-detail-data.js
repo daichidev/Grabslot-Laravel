@@ -44,9 +44,6 @@ var modelDetailData = (function () {
             }
         });
 
-        $('#modelDetailTable').on('click', '.td-block.td-sheet, .dailyModelRed', function () {
-            $("#modelDetailTable").find(".active_blink").removeClass('active_blink');
-        });
 
         $('#modelDetailTable').on('click', '.left-cnt-block .dailyModelBlue', function () {
             $(this).closest('.model-table-row').find(".td-light-blue, .td-blue, .td-dark-blue").addClass('active_blink');
@@ -67,12 +64,18 @@ var modelDetailData = (function () {
             if ($(this).hasClass('blur-background')) {
                 $("#modelDetailTable").find(".blur-background").removeClass('blur-background');
                 $('#dataModal').modal('hide');
-            } else {
+            }
+            else if($("#modelDetailTable").find(".active_blink").length > 0) {
+                $("#modelDetailTable").find(".active_blink").removeClass('active_blink');
+                $('#dataModal').modal('hide');
+            }
+            else {
                 var model_id = $(this).data('id');
                 var model_machine_number = $(this).data('machine_number');
                 var selected_model = getSelectedModel(model_id, model_machine_number, modelMonthData);
+                var sel_date = $(this).data('date');
 
-                getModelData(model_id);
+                getModelData(model_id, sel_date);
                 modelChart(model_id, model_machine_number, selected_model);
                 $("#dataModal").modal('show');
             }
@@ -102,13 +105,14 @@ var modelDetailData = (function () {
         return temp_obj;
     };
 
-    var updateTable = function (modelData) {
+    var updateTable = function (modelData, sel_date) {
         var tbody = $("#modalTableBody");
 
         console.log(modelData);
 
         tbody.empty();
         tbody.append("<tr>" +
+            "<td>" + sel_date + "</td>" +
             "<td>" + modelData.machine_number + "</td>" +
             "<td>" + modelData.g_number + "</td>" +
             "<td>" + modelData.extra_sheet + "</td>" +
@@ -122,7 +126,7 @@ var modelDetailData = (function () {
         $('#dataModal').modal('show');
     };
 
-    var getModelData = function (model_id) {
+    var getModelData = function (model_id, sel_date) {
         $.ajax({
             url: "/model-data",
             type: "POST",
@@ -131,7 +135,7 @@ var modelDetailData = (function () {
             },
             success: function (response) {
                 var modelData = response.model;
-                updateTable(modelData);
+                updateTable(modelData, sel_date);
             },
             error: function (error) {
                 console.error('Ajax request failed: ', error);
@@ -169,7 +173,7 @@ var modelDetailData = (function () {
             },
             chart: {
                 type: 'area',
-                height: 275,
+                height: 175,
                 toolbar: {
                     show: false
                 }
@@ -194,10 +198,10 @@ var modelDetailData = (function () {
             xaxis: {
                 categories: [],
                 axisBorder: {
-                    show: false,
+                    show: true,
                 },
                 axisTicks: {
-                    show: false
+                    show: true
                 },
                 labels: {
                     formatter: function (value) {
@@ -205,7 +209,7 @@ var modelDetailData = (function () {
                     },
                     style: {
                         colors: KTApp.getSettings()['colors']['gray']['gray-500'],
-                        fontSize: '12px',
+                        fontSize: '8px',
                         fontFamily: KTApp.getSettings()['font-family']
                     }
                 },

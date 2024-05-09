@@ -140,9 +140,18 @@
                                             <div class="td-block td-model-name model-sticky-h-4">@if($i < $mainItemCount) {{ $modelId[$i] }} @endif</div>
 
                                             @foreach ($modelMonthData as $date => $items)
+                                                @php
+                                                    $dateString = substr($date, 5);
+
+                                                    if (isset($dateString[3]) && $dateString[3] === '0') {
+                                                        $dateString = substr_replace($dateString, '', 3, 1);
+                                                    }
+
+                                                    $dateString = str_replace(array('(', ')'), '', $dateString);
+                                                @endphp
                                                 @if ($i < $mainItemCount)
                                                     @if ( isset($items[$i]['extra_sheet']) )
-                                                        <div class="td-block {{ isset($items[$i]['item_color']['color']) ? $items[$i]['item_color']['color'] : '' }} td-sheet" data-id="{{ isset($items[$i]['id']) ? $items[$i]['id'] : '' }}" data-machine_number="{{ isset($items[$i]['machine_number']) ? $items[$i]['machine_number'] : '' }}">
+                                                        <div class="td-block {{ isset($items[$i]['item_color']['color']) ? $items[$i]['item_color']['color'] : '' }} td-sheet" data-id="{{ isset($items[$i]['id']) ? $items[$i]['id'] : '' }}" data-machine_number="{{ isset($items[$i]['machine_number']) ? $items[$i]['machine_number'] : '' }}" data-date="{{ isset($dateString) ? $dateString : '' }}">
                                                             {{ $items[$i]['extra_sheet'] ?? '' }}
                                                         </div>
                                                     @else
@@ -189,6 +198,7 @@
                         <table class="table table-checkable table-bordered" id="modalTable">
                             <thead>
                                 <tr>
+                                    <th>日付</th>
                                     <th>台番号</th>
                                     <th>G数</th>
                                     <th>差枚</th>
