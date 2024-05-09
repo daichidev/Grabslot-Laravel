@@ -34,7 +34,7 @@
 			<!--begin::Logo-->
 			<a href="/">
 				<img alt="Logo" src="{{ asset('assets/media/logos/logo.svg') }}" class="logo-default max-h-30px w-100" />
-                <h6 style="font-size: 14px; margin-top: 2px">パチスロ高設定予測サイト</h6>
+                <h6 style="font-size: 14px; margin-top: 2px; color: white">パチスロ高設定予測サイト</h6>
 			</a>
 
 			<!--end::Logo-->
