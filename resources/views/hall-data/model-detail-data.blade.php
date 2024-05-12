@@ -32,31 +32,39 @@
 
                         <div class="my-10 row px-4">
                             <div class="d-flex align-items-center mr-8 my-2">
-                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-red text-dark font-weight-bolder">赤セル </div>
+                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-red text-dark font-weight-bolder">赤 </div>
                                 <p class="fs-9 text-white pl-2 mb-0">-3000以上</p>
                             </div>
                             <div class="d-flex align-items-center mr-8 my-2">
-                                <div class="w-75px rounded-5 py-2 px-2 fs-9 td-pink text-dark font-weight-bolder"> ピンクセル</div>
+                                <div class="w-75px rounded-5 py-2 px-2 fs-9 td-pink text-dark font-weight-bolder"> ピンク</div>
                                 <p class="fs-9 text-white pl-2 mb-0">-1 ~ -2999</p>
                             </div>
                             <div class="d-flex align-items-center mr-8 my-2">
-                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-white text-dark font-weight-bolder">白セル</div>
+                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-white text-dark font-weight-bolder">白</div>
                                 <p class="fs-9 text-white pl-2 mb-0">0 ~ 999</p>
                             </div>
                             <div class="d-flex align-items-center mr-8 my-2">
-                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-light-blue text-dark font-weight-bolder">水色セル</div>
+                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-light-blue text-dark font-weight-bolder" style="background-color: #1a1b23 !important">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mr-8 my-2">
+                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-light-blue text-dark font-weight-bolder">水色</div>
                                 <p class="fs-9 text-white pl-2 mb-0">1000 ~ 2999</p>
                             </div>
                             <div class="d-flex align-items-center mr-8 my-2">
-                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-blue text-white font-weight-bolder">青セル</div>
+                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-blue text-white font-weight-bolder">青</div>
                                 <p class="fs-9 text-white pl-2 mb-0">3000 ~ 4999</p>
                             </div>
                             <div class="d-flex align-items-center mr-8 my-2">
-                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-dark-blue font-weight-bolder text-white">紺セル</div>
+                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-dark-blue font-weight-bolder text-white">紺</div>
                                 <p class="fs-9 text-white pl-2 mb-0">5000以上</p>
                             </div>
                             <div class="d-flex align-items-center mr-8 my-2">
-                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-gray text-dark font-weight-bolder">灰色セル</div>
+                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-light-blue text-dark font-weight-bolder" style="background-color: #1a1b23 !important">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mr-8 my-2">
+                                <div class="w-65px rounded-5 py-2 px-2 fs-9 td-gray text-dark font-weight-bolder">灰色</div>
                                 <p class="fs-9 text-white pl-2 mb-0">2000回転未満</p>
                             </div>
                         </div>
@@ -193,11 +201,18 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div id="model-chart"></div>
+                    {{-- <div id="model-chart"></div> --}}
                     <div class="table-responsive" style="height: auto">
                         <table class="table table-checkable table-bordered" id="modalTable">
                             <thead>
                                 <tr>
+                                    <style>
+                                    th, td {
+                                        padding:1rem 0 !important;
+                                        text-align: center;
+                                        font-size: 0.9rem !important;
+                                    }
+                                    </style>
                                     <th>日付</th>
                                     <th>台番号</th>
                                     <th>G数</th>

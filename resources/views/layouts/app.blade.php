@@ -30,10 +30,10 @@
 	<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
 		<!--begin::Main-->
 		<!--begin::Header Mobile-->
-		<div id="kt_header_mobile" class="header-mobile">
+		<div id="kt_header_mobile" class="header-mobile" style="min-height: 80px;">
 			<!--begin::Logo-->
 			<a href="/">
-				<img alt="Logo" src="{{ asset('assets/media/logos/logo.svg') }}" class="logo-default max-h-30px w-100" />
+				<img alt="Logo" src="{{ asset('assets/media/logos/logo.svg') }}" class="logo-default max-h-45px w-100" />
                 <h6 style="font-size: 14px; margin-top: 2px; color: white">パチスロ高設定予測サイト</h6>
 			</a>
 
@@ -212,15 +212,15 @@
 						<div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
 							<div>
                                 <div class="logo">
-                                    <a href="/"><img src="{{ asset('assets/media/logos/logo.svg') }}" alt="" class="max-h-30px"></a>
+                                    <a href="/"><img src="{{ asset('assets/media/logos/logo.svg') }}" alt="" class="max-h-45px"></a>
                                     <h6 style="font-size: 14px; margin-top: 2px; color: white">パチスロ高設定予測サイト</h6>
                                 </div>
                                 <div class="social-link-list mt-7">
                                     <a href="https://twitter.com/grab202404" class="btn btn-icon btn-outline-white btn-circle mr-2">
-                                        <i class="fa-brands mt-1 fa-x-twitter"></i>
+                                        <i class="fa-brands mt-1 fa-x-twitter" style="font-size: 2rem !important"></i>
                                     </a>
                                     <a href="#" class="btn btn-icon btn-outline-white btn-circle mr-2">
-                                        <i class="fa-brands mt-1 fa-instagram fs-7"></i>
+                                        <i class="fa-brands mt-1 fa-instagram fs-7" style="font-size: 2rem !important"></i>
                                     </a>
                                 </div>
                             </div>

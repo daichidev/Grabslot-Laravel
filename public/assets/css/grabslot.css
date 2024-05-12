@@ -363,11 +363,10 @@ div.dataTables_wrapper div.dataTables_filter input {
     justify-content: center;
 }
 .model-table-row > .td-block:nth-child(1), .divide-cell {
-    border-right: 1.5px solid #27282e;
+    /* border-right: 1.5px solid #27282e; */
 }
 .model-table-row > .td-block:nth-child(2), .divide-cell {
     flex: 1 !important;
-    border-right: 1.5px solid #27282e !important;
 }
 #modelDetailTable > .model-table-row:first-child {
     border-bottom: 0.5px solid #27282e;
@@ -444,13 +443,13 @@ div.dataTables_wrapper div.dataTables_filter input {
     background-color: transparent !important;
 }
 #model-chart {
-    min-height: 175px !important;
+    min-height: 1px !important;
 }
 /* End::Modal Table */
 
 /* Footer */
 .footer .logo img {
-    width: 145px;
+    /* width: 145px; */
 }
 
 /* Search Hall Modal Table */
@@ -497,7 +496,7 @@ div.dataTables_wrapper div.dataTables_filter input {
         justify-content: center;
     }
     #dataModal .modal-content {
-        width: 70%;
+        width: 90%;
     }
     #dataModal .modal-header {
         display: none;
@@ -925,3 +924,10 @@ html {
 .w-80 {
     width:60% !important
 }
+
+
+@media (max-width: 991.98px) {
+    #kt_header_mobile {
+      min-height: 80px !important;
+    }
+  }

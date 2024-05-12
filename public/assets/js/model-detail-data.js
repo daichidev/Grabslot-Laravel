@@ -173,7 +173,7 @@ var modelDetailData = (function () {
             },
             chart: {
                 type: 'area',
-                height: 175,
+                height: 120,
                 toolbar: {
                     show: false
                 }
