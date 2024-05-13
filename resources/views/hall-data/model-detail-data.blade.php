@@ -145,7 +145,7 @@
                                                 $blueCnt = 0;
                                             @endphp
 
-                                            <div class="td-block td-model-name model-sticky-h-4">@if($i < $mainItemCount) {{ $modelId[$i] }} @endif</div>
+                                            <div class="td-block td-model-name model-sticky-h-4" style="border-right: 1px solid #27282e;">@if($i < $mainItemCount) {{ $modelId[$i] }} @endif</div>
 
                                             @foreach ($modelMonthData as $date => $items)
                                                 @php

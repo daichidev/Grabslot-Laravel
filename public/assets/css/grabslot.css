@@ -363,7 +363,7 @@ div.dataTables_wrapper div.dataTables_filter input {
     justify-content: center;
 }
 .model-table-row > .td-block:nth-child(1), .divide-cell {
-    /* border-right: 1.5px solid #27282e; */
+    border-right: 1px solid #27282e;
 }
 .model-table-row > .td-block:nth-child(2), .divide-cell {
     flex: 1 !important;
@@ -511,8 +511,8 @@ div.dataTables_wrapper div.dataTables_filter input {
     background-color: #ffffff;
     flex: 1;
     min-width: 19px;
-    border-right: 0.8px solid #27282e;
-    border-bottom: 0.8px solid #27282e;
+    border-right: 1.2px solid #27282e;
+    border-bottom: 1px solid #27282e;
     box-sizing: border-box;
     height: 32px;
     width: 100%;
