@@ -163,7 +163,7 @@
                                                             {{ $items[$i]['extra_sheet'] ?? '' }}
                                                         </div>
                                                     @else
-                                                        <div class="td-block"></div>
+                                                        <div class="td-block td-sheet"></div>
                                                     @endif
                                                 @else
                                                     <div class="td-block">
