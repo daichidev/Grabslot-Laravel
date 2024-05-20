@@ -76,19 +76,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .arrow_1 {
     margin-top: 3px;
-    left: 24px;
+    left: 4px;
 }
 .arrow_1_2 {
     margin-top: 3px;
-    left: 77px;
+    left: 320px;
 }
 .arrow_2 {
     margin-top: 3px;
-    left: 224px;
+    left: 291px;
 }
 .arrow_3 {
-    top: 153px;
-    left: -17px;
+    top: 183px;
+    right: 36px;
 }
 .mouse-pinter i {
     color: white;
