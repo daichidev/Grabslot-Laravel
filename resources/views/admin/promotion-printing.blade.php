@@ -94,11 +94,24 @@
                         <div class="mt-7">
                             <h4 class="font-weight-bold">● ホールの癖が丸わかり</h4>
                             <div class="pl-15">
-                                <p class="fs-7">並びで入りやすいのか・・角が強いのか・・</p>
-                                <p class="fs-7">据え置きをしてくるのか・・大きく凹んだ翌日は・・</p>
+                                <span class="fs-7">並びで入りやすいのか・・角が強いのか・・据え置きをしてくるのか・・大きく凹んだ翌日は・・</span>
                             </div>
-
-                            <h4 class="font-weight-bold mt-3">● 出玉状況を点ではなく面でみる！</h4>
+                            <h4 class="font-weight-bold mt-3">● 過去の月と比較ができる</h4>
+                            <div class="pl-15">
+                                <p class="fs-7">月単位で比較できるので、ひと月の中で強い時期が機種ごとにわかる！</p>
+                            </div>
+                            <h4 class="font-weight-bold mt-3">● 出玉状況を線で、そして面でみる！</h4>
+                            <div class="pl-15">
+                                <p class="fs-7">GRABの一番の特徴。面でデータを見ることによって狙い台が絞りやすくなる！</p>
+                            </div>
+                            <h4 class="font-weight-bold mt-3">● 差枚数を視覚的にとらえる！</h4>
+                            <div class="pl-15">
+                                <p class="fs-7">差枚数を色別に表記しているので細かく数字を見なくても色で分かる！</p>
+                            </div>
+                            <h4 class="font-weight-bold mt-3">● 個別のデータも確認できる！</h4>
+                            <div class="pl-15">
+                                <p class="fs-7">差枚数をタップすると個別データを確認できます！</p>
+                            </div>
                         </div>
                     </div>
 
@@ -106,40 +119,40 @@
                         <div class="row">
                             <div class="col-9 col-9">
                                 <h3 class="font-weight-bolder">＜表の見方＞</h6>
-                                <div class="mt-7">
+                                <div class="mt-7 print-erase-1">
                                     <p class="font-weight-bold fs-7">数字はその日のトータル差枚数です</p>
                                     <p class="font-weight-bold fs-7">差枚数プラス台はブルーで表示、マイナス台は赤系で表示</p>
                                     <p class="font-weight-bold fs-7">差枚数ごとのセル色</p>
                                 </div>
-                                
+
                                 <div class="mt-7">
                                     <div class="d-flex align-items-center">
-                                        <div class="w-65px py-2 rounded-10 px-2 fs-8 td-white border">白</div>
-                                        <p class="fs-7 mb-0 ml-3">・・0～999枚</p>
+                                        <span class="w-65px py-2 rounded-10 px-2 fs-8 td-white border">白</span>
+                                        <span class="fs-7 mb-0 ml-3">・・0～999枚</span>
                                     </div>
                                     <div class="d-flex align-items-center my-2">
-                                        <div class="w-65px py-2 rounded-10 px-2 fs-7 td-light-blue">水色</div>
-                                        <p class="fs-7 mb-0 ml-3">・・1000～2999枚</p>
+                                        <span class="w-65px py-2 rounded-10 px-2 fs-7 td-light-blue">水色</span>
+                                        <span class="fs-7 mb-0 ml-3">・・1000～2999枚</span>
                                     </div>
                                     <div class="d-flex align-items-center my-2">
-                                        <div class="w-65px py-2 rounded-10 px-2 fs-7 td-blue">青</div>
-                                        <p class="fs-7 mb-0 ml-3">・・3000～4999枚</p>
+                                        <span class="w-65px py-2 rounded-10 px-2 fs-7 td-blue">青</span>
+                                        <span class="fs-7 mb-0 ml-3">・・3000～4999枚</span>
                                     </div>
                                     <div class="d-flex align-items-center my-2">
-                                        <div class="w-65px py-2 rounded-10 px-2 fs-7 td-dark-blue text-white">紺</div>
-                                        <p class="fs-7 mb-0 ml-3">・・5000枚以上</p>
+                                        <span class="w-65px py-2 rounded-10 px-2 fs-7 td-dark-blue text-white">紺</span>
+                                        <span class="fs-7 mb-0 ml-3">・・5000枚以上</span>
                                     </div>
                                     <div class="d-flex align-items-center my-2">
-                                        <div class="w-65px py-2 rounded-10 px-2 fs-7 td-pink">ピンク</div>
-                                        <p class="fs-7 mb-0 ml-3">・・-1 ～ -2999枚</p>
+                                        <span class="w-65px py-2 rounded-10 px-2 fs-7 td-pink">ピンク</span>
+                                        <span class="fs-7 mb-0 ml-3">・・-1 ～ -2999枚</span>
                                     </div>
                                     <div class="d-flex align-items-center my-2">
-                                        <div class="w-65px py-2 rounded-10 px-2 fs-7 td-red">赤</div>
-                                        <p class="fs-7 mb-0 ml-3">・・-3000枚以上</p>
+                                        <span class="w-65px py-2 rounded-10 px-2 fs-7 td-red">赤</span>
+                                        <span class="fs-7 mb-0 ml-3">・・-3000枚以上</span>
                                     </div>
                                     <div class="d-flex align-items-center my-2">
-                                        <div class="w-65px py-2 rounded-10 px-2 fs-7 td-gray">グレー</div>
-                                        <p class="fs-7 mb-0 ml-3">・・回転数2000回転未満台</p>
+                                        <span class="w-65px py-2 rounded-10 px-2 fs-7 td-gray">グレー</span>
+                                        <span class="fs-7 mb-0 ml-3">・・回転数2000回転未満台</span>
                                     </div>
                                 </div>
                             </div>
@@ -229,11 +242,11 @@
 
 <script>
     var modelMonthData = {};
-    
+
     $(document).ready(function() {
 
         // Your data to be encoded in the QR code
-        var data = 'https://grab-slot.co.jp/register';
+        var data = 'https://salmonfennec4.sakura.ne.jp/login';
 
         // Generate QR code
         var qrcode = new QRCode(document.getElementById('qrcode'), {
@@ -250,6 +263,19 @@
             // Remove unnecessary elements or modify content as needed
             printSection.find('.btn-circle').hide();
             printSection.find('.img-desc').hide();
+
+            printSection.find('h4').css({
+                'margin': 0,
+            });
+
+            printSection.find('p').css({
+                'margin': 0,
+            });
+
+            printSection.find('#qrcode').css({
+                'margin-top': '60px',
+            });
+
 
             var printWindow = $('<iframe>', {
                 name: 'printWindow',
@@ -285,7 +311,7 @@
         });
 
 
-        // Store & Model table        
+        // Store & Model table
         var store_name="", store_id="", model_name="";
         // $("#modelInput").hide();
 
@@ -317,18 +343,18 @@
             $("#storeList").empty();
             store_name = $(this).text();
             store_id = $(this).data('id');
-            
+
             $("#store").val(store_name);
-            
+
             $("#modelInput").show();
         });
 
         $("#modelList").on("click", ".p-link", function() {
             $("#modelList").empty();
             model_name = $(this).text();
-            
+
             $("#model").val(model_name);
-            
+
             showModelTable(store_name, model_name);
         });
 
@@ -375,7 +401,7 @@
 
                     // Set model name of the modal
                     $("#modelName").text(model_name);
-                    
+
                     modelMonthData = response.modelMonthData;
                 },
                 error: function (error) {
