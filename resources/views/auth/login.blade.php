@@ -5,7 +5,8 @@
     <div class="login-signin">
         <div class="mb-10">
             <div class="my-17">
-                <a class="area" href="{{ asset('Grabslot_landingPage/index.html') }}" target="_blank">ここをクリック</a>
+                <span class="area">このサイトの使い方は</span><br />
+                <a class="area1" href="{{ asset('Grabslot_landingPage/index.html') }}" target="_blank">ここをクリック</a>
             </div>
             <!-- <div class="login-promotion-title my-15">
                 <a href="https://grabslot.co.jp" target="_blank">GRABの宣伝URLとリンクさせる！</a>
