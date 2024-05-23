@@ -25,7 +25,7 @@
                 </div>
                 <div id="printSection" class="card-body px-10">
                     <div class="text-center mt-15">
-                        <h1 class="font-weight-bolder fs-2">パチスロ高設定予測サイト ~GRAB~</h1>
+                        <h1 class="font-weight-bolder fs-2">パチスロ高設定予測サイト <img class="admin-print-title-grab" alt="Logo" src="{{ asset('assets/media/logos/logo.svg') }}" /></h1>
                         <h3 class="my-10 fs-5">【明日からあなたの台選びが変わる！】</h3>
                         <p class="fs-7 font-weight-bold">「GRAB」とは掴み取るという意味です。</p>
                         <p class="fs-7 font-weight-bold">このサイトを活用して高設定を、勝利を掴み取って下さい！</p>
@@ -92,23 +92,23 @@
                     <div class="mt-15">
                         <h3 class="font-weight-bolder">狙い台が明確になる！</h3>
                         <div class="mt-7">
-                            <h4 class="font-weight-bold">● ホールの癖が丸わかり</h4>
+                            <h4 class="font-weight-bold-600">● ホールの癖が丸わかり</h4>
                             <div class="pl-15">
                                 <span class="fs-7">並びで入りやすいのか・・角が強いのか・・据え置きをしてくるのか・・大きく凹んだ翌日は・・</span>
                             </div>
-                            <h4 class="font-weight-bold mt-3">● 過去の月と比較ができる</h4>
+                            <h4 class="font-weight-bold-600 mt-3">● 過去の月と比較ができる</h4>
                             <div class="pl-15">
                                 <p class="fs-7">月単位で比較できるので、ひと月の中で強い時期が機種ごとにわかる！</p>
                             </div>
-                            <h4 class="font-weight-bold mt-3">● 出玉状況を線で、そして面でみる！</h4>
+                            <h4 class="font-weight-bold-600 mt-3">● 出玉状況を線で、そして面でみる！</h4>
                             <div class="pl-15">
                                 <p class="fs-7">GRABの一番の特徴。面でデータを見ることによって狙い台が絞りやすくなる！</p>
                             </div>
-                            <h4 class="font-weight-bold mt-3">● 差枚数を視覚的にとらえる！</h4>
+                            <h4 class="font-weight-bold-600 mt-3">● 差枚数を視覚的にとらえる！</h4>
                             <div class="pl-15">
                                 <p class="fs-7">差枚数を色別に表記しているので細かく数字を見なくても色で分かる！</p>
                             </div>
-                            <h4 class="font-weight-bold mt-3">● 個別のデータも確認できる！</h4>
+                            <h4 class="font-weight-bold-600 mt-3">● 個別のデータも確認できる！</h4>
                             <div class="pl-15">
                                 <p class="fs-7">差枚数をタップすると個別データを確認できます！</p>
                             </div>

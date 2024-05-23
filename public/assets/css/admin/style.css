@@ -182,7 +182,7 @@
     display: none;
 }
 
-.p-link {   
+.p-link {
     cursor: pointer;
     list-style: none;
     font-size: 16px;
@@ -277,4 +277,19 @@
 .logout-dropdown {
     background: #1f1e2fa3;
     border-radius: 0 0 5px 5px !important;
+}
+
+.admin-print-title-grab {
+    width: 23%;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+.admin-print-title-grab {
+    width: 50%;
+}
+}
+
+.font-weight-bold-600 {
+    font-weight: 600 !important;
 }
