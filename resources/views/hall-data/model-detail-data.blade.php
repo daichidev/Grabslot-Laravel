@@ -30,7 +30,7 @@
                             <div class="divider w-100px mb-15"></div>
                         </div>
 
-                        <div class="my-10 row px-4">
+                        <div class="my-5 row px-4">
                             <div class="d-flex align-items-center mr-8 my-2">
                                 <div class="w-65px rounded-5 py-2 px-2 fs-9 td-red text-dark font-weight-bolder">赤 </div>
                                 <p class="fs-9 text-white pl-2 mb-0">-3000以上</p>
@@ -68,7 +68,7 @@
                                 <p class="fs-9 text-white pl-2 mb-0">2000回転未満</p>
                             </div>
                         </div>
-
+                        <span style="color:white">ロックを解除して横向きにすると1月分が全て表示されます</span>
                         <div class="table-responsive">
                             <div class="model-table mb-15" id="modelDetailTable">
                                 <div class="model-table-row model-sticky-3">
@@ -179,6 +179,14 @@
                                         </div>
                                     @endfor
                                 </div>
+                            </div>
+                            <div>
+                                <div style="text-align: center">
+                                    <span style="text-align: center; color: white; font-size: 18px">表の詳しい見かたは</span>
+                                </div>
+                                <a class="fluid-btn" href="#" style="margin: auto; width: 180px">
+                                    <span class="fluid-btn-inner py-3 font-weight-bolder" target="_blank">ここをクリック</span>
+                                </a>
                             </div>
                         </div>
                     </div>

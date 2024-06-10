@@ -6,7 +6,9 @@
         <div class="mb-10">
             <div class="my-17">
                 <span class="area">このサイトの使い方は</span><br />
-                <a class="area1" href="{{ asset('Grabslot_landingPage/index.html') }}" target="_blank">ここをクリック</a>
+                <a class="fluid-btn w-200px" href="{{ asset('Grabslot_landingPage/index.html') }}" style="margin: auto">
+                    <span class="fluid-btn-inner py-3 font-weight-bolder" target="_blank">ここをクリック</span>
+                </a>
             </div>
             <!-- <div class="login-promotion-title my-15">
                 <a href="https://grabslot.co.jp" target="_blank">GRABの宣伝URLとリンクさせる！</a>
@@ -31,8 +33,8 @@
                 <a href="/forgot-password" id="kt_login_forgot" class="text-white font-weight-bold">パスワードを忘れましたか?</a>
             </div>
             <div class="form-group text-center mt-10 d-flex justify-content-center">
-                <button class="fluid-btn w-200px">
-                    <span class="fluid-btn-inner py-3 font-weight-bolder">ログイン</span>
+                <button class="fluid-btn1 w-200px">
+                    <span class="fluid-btn-inner1 py-3 font-weight-bolder">ログイン</span>
                 </button>
                 <!-- <button class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3 p-primary-btn">ログイン</button> -->
             </div>
