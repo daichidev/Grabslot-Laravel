@@ -23,13 +23,12 @@ class LogReferrer
 
             // Log the referrer
             Log::info('Referrer: ' . $referrer);
-            // Log::info('Referrer: ' . $request->url());
 
-            $insertUrls['url'] = $referrer;
+            if (strpos($referrer, 'github') !== false) {
+                $insertUrls['url'] = $referrer;
+                LogUrls::create($insertUrls);
+            }
 
-            // Store in session (or database if you prefer)
-            // Session::put('referrer', $referrer);
-            LogUrls::create($insertUrls);
         }
 
         return $next($request);
