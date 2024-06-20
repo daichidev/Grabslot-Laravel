@@ -17,6 +17,11 @@ class LogReferrer
      */
     public function handle(Request $request, Closure $next)
     {
+        if (strpos($request->fullUrl(), 'exist=qr') !== false) {
+            $insertUrls['url'] = "QR";
+            LogUrls::create($insertUrls);
+        }
+
         // Check if the referrer is set and log or store it
         if ($request->hasHeader('referer')) {
             $referrer = $request->headers->get('referer');
@@ -24,10 +29,11 @@ class LogReferrer
             // Log the referrer
             Log::info('Referrer: ' . $referrer);
 
-            if (strpos($referrer, 'github') !== false) {
+            if (strpos($referrer, 'twitter.com') !== false || strpos($referrer, 'instagram.com') !== false) {
                 $insertUrls['url'] = $referrer;
                 LogUrls::create($insertUrls);
             }
+
 
         }
 

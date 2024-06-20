@@ -246,7 +246,7 @@
     $(document).ready(function() {
 
         // Your data to be encoded in the QR code
-        var data = 'https://salmonfennec4.sakura.ne.jp/login';
+        var data = 'https://salmonfennec4.sakura.ne.jp/login?exist=qr';
 
         // Generate QR code
         var qrcode = new QRCode(document.getElementById('qrcode'), {

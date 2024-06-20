@@ -23,8 +23,8 @@
                         <div class="card-header h-auto border-0">
                             <div class="card-title pt-5">
                                 <h3 class="card-label">
-                                    <span class="d-block text-dark font-weight-bolder">SNS</span>
-                                    <span class="d-block text-muted mt-2 font-size-sm">300 人以上の新規ユーザー</span>
+                                    <span class="d-block text-dark font-weight-bolder">Twitter</span>
+                                    {{-- <span class="d-block text-muted mt-2 font-size-sm">300 人以上の新規ユーザー</span> --}}
                                 </h3>
                             </div>
                         </div>
@@ -45,8 +45,8 @@
                         <div class="card-header h-auto border-0">
                             <div class="card-title pt-5">
                                 <h3 class="card-label">
-                                    <span class="d-block text-dark font-weight-bolder">宣伝ちらし</span>
-                                    <span class="d-block text-muted mt-2 font-size-sm">100 人以上の新規ユーザー</span>
+                                    <span class="d-block text-dark font-weight-bolder">Instagram</span>
+                                    {{-- <span class="d-block text-muted mt-2 font-size-sm">100 人以上の新規ユーザー</span> --}}
                                 </h3>
                             </div>
                         </div>
@@ -54,6 +54,28 @@
                         <!--begin::Body-->
                         <div class="card-body">
                             <div id="promotion-chart"></div>
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Twitter Chart-->
+                </div>
+
+                <div class="col-lg-6">
+                    <!--begin::Twitter Chart-->
+                    <div class="card card-custom card-stretch gutter-b">
+                        <!--begin::Header-->
+                        <div class="card-header h-auto border-0">
+                            <div class="card-title pt-5">
+                                <h3 class="card-label">
+                                    <span class="d-block text-dark font-weight-bolder">QR</span>
+                                    {{-- <span class="d-block text-muted mt-2 font-size-sm">100 人以上の新規ユーザー</span> --}}
+                                </h3>
+                            </div>
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body">
+                            <div id="qr-chart"></div>
                         </div>
                         <!--end::Body-->
                     </div>
@@ -76,7 +98,7 @@
                                 </a>
                             </li>
                             <!--end::Item-->
-                           
+
                             <!--begin::Item-->
                             <li class="nav-item mr-3">
                                 <a class="nav-link" data-toggle="tab" href="#tab-promotion-list">
@@ -95,8 +117,19 @@
                         <div class="tab-content">
                             <!--begin::Tab-->
                             <div class="tab-pane show active px-7" id="tab-sns-list" role="tabpanel">
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h3>Twitter: {{$twitterCount}}</h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>Instagram: {{$instagramCount}}</h3>
+                                    </div>
+                                </div>
+
+
                                <!--begin: Datatable-->
-                               <table class="table table-bordered table-hover table-checkable mt-10" id="snsTable">
+                               {{-- <table class="table table-bordered table-hover table-checkable mt-10" id="snsTable">
                                     <thead>
                                         <tr>
                                             <th>ID</th>
@@ -105,15 +138,21 @@
                                             <th>登録日</th>
                                         </tr>
                                     </thead>
-                                </table>
+                                </table> --}}
                                 <!--end: Datatable-->
                             </div>
                             <!--end::Tab-->
 
                             <!--begin::Tab-->
                             <div class="tab-pane px-7" id="tab-promotion-list" role="tabpanel">
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h3>QR: {{$qrCount}}</h3>
+                                    </div>
+                                </div>
                                <!--begin: Datatable-->
-                               <table class="table table-bordered table-hover table-checkable mt-10" id="promotionTable">
+                               {{-- <table class="table table-bordered table-hover table-checkable mt-10" id="promotionTable">
                                     <thead>
                                         <tr>
                                             <th>ID</th>
@@ -122,7 +161,7 @@
                                             <th>登録日</th>
                                         </tr>
                                     </thead>
-                                </table>
+                                </table> --}}
                                 <!--end: Datatable-->
                             </div>
                             <!--end::Tab-->
@@ -157,10 +196,16 @@
                 return;
             }
 
+            let countByMonth = [];
+
+            @for ($i = 1; $i <= 12; $i++)
+                countByMonth.push({{ $twitterByMonth[$i] ?? 0 }}); // Use null coalescing operator to handle missing keys
+            @endfor
+
             var options = {
                 series: [{
                     name: '新しい利用者',
-                    data: [35, 60, 70, 79, 96, 96, 150, 257, 300, 300, 350, 350]
+                    data: countByMonth
                 }],
                 chart: {
                     type: 'area',
@@ -291,10 +336,156 @@
                 return;
             }
 
+            let countByMonthInstagram = [];
+
+            @for ($i = 1; $i <= 12; $i++)
+                countByMonthInstagram.push({{ $instagramByMonth[$i] ?? 0 }});
+            @endfor
+
             var options = {
                 series: [{
                     name: '新しい利用者',
-                    data: [30, 45, 45, 55, 67, 88, 100, 150, 155, 130, 130, 145]
+                    data: countByMonthInstagram
+                }],
+                chart: {
+                    type: 'area',
+                    height: 350,
+                    toolbar: {
+                        show: false
+                    }
+                },
+                plotOptions: {
+
+                },
+                legend: {
+                    show: false
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                fill: {
+                    type: 'solid',
+                    opacity: 1
+                },
+                stroke: {
+                    curve: 'smooth',
+                    show: true,
+                    width: 3,
+                    colors: [KTApp.getSettings()['colors']['theme']['base']['primary']]
+                },
+                xaxis: {
+                    categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                    axisBorder: {
+                        show: false,
+                    },
+                    axisTicks: {
+                        show: false
+                    },
+                    labels: {
+                        style: {
+                            colors: KTApp.getSettings()['colors']['gray']['gray-500'],
+                            fontSize: '12px',
+                            fontFamily: KTApp.getSettings()['font-family']
+                        }
+                    },
+                    crosshairs: {
+                        position: 'front',
+                        stroke: {
+                            color: KTApp.getSettings()['colors']['theme']['base']['primary'],
+                            width: 1,
+                            dashArray: 3
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                        formatter: undefined,
+                        offsetY: 0,
+                        style: {
+                            fontSize: '12px',
+                            fontFamily: KTApp.getSettings()['font-family']
+                        }
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: KTApp.getSettings()['colors']['gray']['gray-500'],
+                            fontSize: '12px',
+                            fontFamily: KTApp.getSettings()['font-family']
+                        }
+                    }
+                },
+                states: {
+                    normal: {
+                        filter: {
+                            type: 'none',
+                            value: 0
+                        }
+                    },
+                    hover: {
+                        filter: {
+                            type: 'none',
+                            value: 0
+                        }
+                    },
+                    active: {
+                        allowMultipleDataPointsSelection: false,
+                        filter: {
+                            type: 'none',
+                            value: 0
+                        }
+                    }
+                },
+                tooltip: {
+                    style: {
+                        fontSize: '12px',
+                        fontFamily: KTApp.getSettings()['font-family']
+                    },
+                    y: {
+                        formatter: function (val) {
+                            return val + " 人"
+                        }
+                    }
+                },
+                colors: [KTApp.getSettings()['colors']['theme']['light']['primary']],
+                grid: {
+                    borderColor: KTApp.getSettings()['colors']['gray']['gray-200'],
+                    strokeDashArray: 4,
+                    yaxis: {
+                        lines: {
+                            show: true
+                        }
+                    }
+                },
+                markers: {
+                    //size: 5,
+                    //colors: [KTApp.getSettings()['colors']['theme']['light']['danger']],
+                    strokeColor: KTApp.getSettings()['colors']['theme']['base']['primary'],
+                    strokeWidth: 3
+                }
+            };
+
+            var chart = new ApexCharts(element, options);
+            chart.render();
+        }
+
+        var qrChart = function () {
+            var element = document.getElementById("qr-chart");
+
+            if (!element) {
+                return;
+            }
+
+            let countByMonthqr = [];
+
+            @for ($i = 1; $i <= 12; $i++)
+                countByMonthqr.push({{ $qrByMonth[$i] ?? 0 }});
+            @endfor
+
+            var options = {
+                series: [{
+                    name: '新しい利用者',
+                    data: countByMonthqr
                 }],
                 chart: {
                     type: 'area',
@@ -424,6 +615,7 @@
                 // Charts Widgets
                 snsChart();
                 promotionChart();
+                qrChart();
             }
         }
     }();
