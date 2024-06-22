@@ -22,20 +22,30 @@ class LogReferrer
             LogUrls::create($insertUrls);
         }
 
-        // Check if the referrer is set and log or store it
-        if ($request->hasHeader('referer')) {
-            $referrer = $request->headers->get('referer');
-
-            // Log the referrer
-            Log::info('Referrer: ' . $referrer);
-
-            if (strpos($referrer, 'twitter.com') !== false || strpos($referrer, 'instagram.com') !== false) {
-                $insertUrls['url'] = $referrer;
-                LogUrls::create($insertUrls);
-            }
-
-
+       elseif (strpos($request->fullUrl(), 'exist=twitter.com') !== false) {
+            $insertUrls['url'] = "twitter.com";
+            LogUrls::create($insertUrls);
         }
+
+        elseif (strpos($request->fullUrl(), 'exist=instagram.com') !== false) {
+            $insertUrls['url'] = "instagram.com";
+            LogUrls::create($insertUrls);
+        }
+
+        // Check if the referrer is set and log or store it
+        // if ($request->hasHeader('referer')) {
+        //     $referrer = $request->headers->get('referer');
+
+        //     // Log the referrer
+        //     Log::info('Referrer: ' . $referrer);
+
+        //     if (strpos($referrer, 'twitter.com') !== false || strpos($referrer, 'instagram.com') !== false) {
+        //         $insertUrls['url'] = $referrer;
+        //         LogUrls::create($insertUrls);
+        //     }
+
+
+        // }
 
         return $next($request);
     }

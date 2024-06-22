@@ -9,18 +9,18 @@ use App\Models\LogUrls;
 class AdminController extends Controller
 {
     public function index() {
-        $twitterCount = LogUrls::where('url', 'LIKE', '%https://twitter.com%')->count();
-        $instagramCount = LogUrls::where('url', 'LIKE', '%https://www.instagram.com%')->count();
+        $twitterCount = LogUrls::where('url', 'LIKE', '%twitter.com%')->count();
+        $instagramCount = LogUrls::where('url', 'LIKE', '%instagram.com%')->count();
         $qrCount = LogUrls::where('url', 'LIKE', '%QR%')->count();
 
         $currentYear = date('Y');
         $twitterByMonth = [];
         for ($i=1; $i <= 12; $i++) {
-            $twitterByMonth[$i] = LogUrls::where('url', 'LIKE', '%https://twitter.com%')->whereYear('created_at', $currentYear)->whereMonth('created_at', $i)->count();
+            $twitterByMonth[$i] = LogUrls::where('url', 'LIKE', '%twitter.com%')->whereYear('created_at', $currentYear)->whereMonth('created_at', $i)->count();
         }
         $instagramByMonth = [];
         for ($i=1; $i <= 12; $i++) {
-            $instagramByMonth[$i] = LogUrls::where('url', 'LIKE', '%https://www.instagram.com%')->whereYear('created_at', $currentYear)->whereMonth('created_at', $i)->count();
+            $instagramByMonth[$i] = LogUrls::where('url', 'LIKE', '%instagram.com%')->whereYear('created_at', $currentYear)->whereMonth('created_at', $i)->count();
         }
         $qrByMonth = [];
         for ($i=1; $i <= 12; $i++) {
