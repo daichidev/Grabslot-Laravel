@@ -184,7 +184,7 @@
                                 <div style="text-align: center">
                                     <span style="text-align: center; color: white; font-size: 18px">表の詳しい見かたは</span>
                                 </div>
-                                <a class="fluid-btn" href="#" style="margin: auto; width: 180px">
+                                <a class="fluid-btn" href="/Grabslot_landingPage/index.html" style="margin: auto; width: 180px">
                                     <span class="fluid-btn-inner py-3 font-weight-bolder" target="_blank">ここをクリック</span>
                                 </a>
                             </div>

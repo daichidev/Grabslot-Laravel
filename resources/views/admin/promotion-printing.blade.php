@@ -151,7 +151,7 @@
                                         <span class="fs-7 mb-0 ml-3">・・-3000枚以上</span>
                                     </div>
                                     <div class="d-flex align-items-center my-2">
-                                        <span class="w-65px py-2 rounded-10 px-2 fs-7 td-gray">グレー</span>
+                                        <span class="w-65px py-2 rounded-10 px-2 fs-7 td-gray">灰色</span>
                                         <span class="fs-7 mb-0 ml-3">・・回転数2000回転未満台</span>
                                     </div>
                                 </div>
@@ -159,7 +159,10 @@
 
                             <div class="col-3 col-3 align-items-end">
                                 <!-- Add this to the body of your HTML file -->
-                                <div id="qrcode"  class="qr-code-container"></div>
+                                <div  class="qr-code-container">
+                                    <div>GRABへはこちらから</div>
+                                    <div id="qrcode"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

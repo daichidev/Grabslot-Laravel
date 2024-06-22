@@ -30,7 +30,7 @@
 .qr-code-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     height: 100%;
 }
@@ -125,22 +125,22 @@
     background-color: #ffffff !important;
 }
 .td-light-blue {
-    background-color: #bfe2ff  !important;
+    background-color: #BAD3FF  !important;
 }
 .td-blue {
-    background-color: #469cf5 !important;
+    background-color: #4689FF !important;
 }
 .td-dark-blue {
-    background-color: #305496 !important;
+    background-color: #0000CC !important;
 }
 .td-pink {
-    background-color: #ff9999!important;
+    background-color: #FF97C2 !important;
 }
 .td-red {
-    background-color: #ff5050 !important;
+    background-color: #FF367F !important;
 }
 .td-gray {
-    background-color: #bfbfbf !important;
+    background-color: #D3D3D3 !important;
 }
 .active_blink{
     box-shadow: 0 0.6em 0.6em -0.2em #39393c;
